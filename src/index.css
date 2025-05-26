@@ -1,68 +1,50 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+.box {
+  padding-left: 3cm;
+  padding-top: 1cm;
+  padding-bottom: 5cm;
+  padding-right: 3cm;
+  color: white;
+  background-color: rgb(38, 15, 58);
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border: 1cm;
+  border-color: blue;
+  transition: background-color 0.4s ease,
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    color 0.4s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.box:hover {
+  transform: scale(1.05);
+  opacity: 0.7;
+  background-color: rgb(113, 31, 113);
+  color: rgb(225, 163, 70);
+}
+
+.btn {
+  background-color: indigo;
+  color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 5px;
+  border: 8px;
+  font-weight: 500;
+  transition: opacity 0.4s ease,
+  stroke 0.4s ease,
+  scale 0.4s ease,
+  background-color 0.4s ease;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  background-color: rgb(85, 4, 160);
+  color: rgb(186, 171, 108);
+  stroke: bisque;
+  transform: scale(1.05);
 }
